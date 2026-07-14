@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; background: #FFFFFF; }
+    a { color: #E10F8C; }
+    a:hover { color: #B80B70; }
+    ::selection { background: #FFC4E6; }
+    * { box-sizing: border-box; }
+    img { max-width: 100%; height: auto; }
+
+    /* ---- responsive breakpoints (mobile-first overrides) ---- */
+    .sl-hero-title { font-size: 40px; }
+    .sl-hero-cta { width: auto; }
+    .sl-pricing-top { grid-template-columns: 1fr 1fr; }
+    .sl-about-grid { grid-template-columns: 200px 1fr; text-align: left; }
+    .sl-about-photo-wrap { margin: 0; }
+    .sl-testimonial-grid { grid-template-columns: repeat(3, 1fr); }
+    .sl-stats-grid { grid-template-columns: repeat(3, 1fr); }
+    .sl-section-pad { padding-left: 32px; padding-right: 32px; }
+
+    @media (max-width: 900px) {
+      .sl-pricing-top { grid-template-columns: 1fr; }
+      .sl-testimonial-grid { grid-template-columns: 1fr; }
+      .sl-about-grid { grid-template-columns: 160px 1fr; gap: 28px; }
+    }
+
+    @media (max-width: 480px) {
+      .sl-pricing-features { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .sl-hero-title { font-size: 30px; }
+      .sl-hero-cta { width: 100%; justify-content: center; }
+      .sl-about-grid { grid-template-columns: 1fr; text-align: center; }
+      .sl-about-photo-wrap { margin: 0 auto; }
+      .sl-stats-grid { grid-template-columns: 1fr; gap: 28px; }
+      .sl-section-pad { padding-left: 20px; padding-right: 20px; }
+    }
+  </style>
+</helmet>
+
+<div style="font-family: 'Poppins', sans-serif; background: #FFFFFF; color: #2B2320; overflow-x: hidden;">
+
+  <!-- decorative stars -->
+  <div style="position: relative;">
+    <div style="position: absolute; top: 40px; left: 6%; font-size: 22px; color: #FFC4E6; transform: rotate(-12deg);">★</div>
+    <div style="position: absolute; top: 120px; right: 9%; font-size: 30px; color: #FFC4E6; transform: rotate(10deg);">★</div>
+  </div>
+
+  <!-- HERO -->
+  <section class="sl-section-pad" style="max-width: 900px; margin: 0 auto; padding-top: 56px; padding-bottom: 56px; text-align: center; display: flex; flex-direction: column; align-items: center;">
+    <div style="background: #fff; border-radius: 28px; padding: 20px 28px; box-shadow: 0 8px 28px rgba(43,35,32,0.08); margin-bottom: 8px; max-width: 100%;">
+      <img src="images/social-lee-logo.png" alt="social-lee logo" style="display: block; width: 300px; max-width: 100%; height: auto;" />
+    </div>
+
+    <h1 class="sl-hero-title" style="font-family: 'Baloo 2', sans-serif; font-weight: 700; color: #E10F8C; margin: 24px 0 20px; letter-spacing: 0.3px; line-height: 1.15;">let us handle social ✨</h1>
+
+    <p style="font-size: 19px; line-height: 1.6; max-width: 620px; margin: 0 0 16px; color: #2B2320;">from content planning to on-trend visuals and engaging captions — we take social media off your plate so you can focus on what you do best.</p>
+
+    <p style="font-size: 15px; line-height: 1.6; max-width: 520px; margin: 0 0 36px; color: #7A6F68;">whether you're starting from scratch or looking to refresh your social strategy, drop us a note and let's bring your brand to life online.</p>
+
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfwcOcuyNz7pGd1jv20yQjwioRXFfpix2OSRUswaq8q942iPQ/viewform" target="_blank" rel="noopener" class="sl-hero-cta" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: #E10F8C; color: #fff; text-decoration: none; padding: 16px 32px; border-radius: 999px; font-family: 'Baloo 2', sans-serif; font-weight: 600; font-size: 17px; box-shadow: 0 8px 20px rgba(225,15,140,0.28);">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" opacity="0"/><path d="M14 3h5v5M21 3l-7 7M8 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      New Client Intake Form 💌
+    </a>
+  </section>
+
+  <!-- PRICING -->
+  <section class="sl-section-pad" style="max-width: 1080px; margin: 0 auto; padding-top: 24px; padding-bottom: 64px; display: flex; flex-direction: column; gap: 28px;">
+
+    <div class="sl-pricing-top" style="display: grid; gap: 24px;">
+      <div style="background: #fff; border-radius: 24px; padding: 32px; box-shadow: 0 4px 24px rgba(43,35,32,0.06); display: flex; flex-direction: column; gap: 14px;">
+        <span style="font-size: 12px; font-weight: 700; letter-spacing: 1px; color: #B9AFA8; text-transform: uppercase;">à la carte</span>
+        <h3 style="font-family: 'Baloo 2', sans-serif; font-size: 24px; margin: 0; font-weight: 600;">🎨 content creation</h3>
+        <p style="margin: 0; font-family: 'Baloo 2', sans-serif; font-size: 30px; color: #E10F8C; font-weight: 700;">$150+ <span style="font-family: 'Poppins', sans-serif; font-size: 15px; color: #7A6F68; font-weight: 400;">per deliverable</span></p>
+        <div class="sl-pricing-features" style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px 16px; margin-top: 4px; font-size: 14.5px; color: #4A403A;">
+          <div>✓ custom graphics &amp; visuals</div>
+          <div>✓ elevate your feed instantly</div>
+          <div>✓ caption copywriting</div>
+          <div>✓ great for one-off campaigns</div>
+        </div>
+      </div>
+
+      <div style="background: #fff; border-radius: 24px; padding: 32px; box-shadow: 0 4px 24px rgba(43,35,32,0.06); display: flex; flex-direction: column; gap: 14px;">
+        <span style="font-size: 12px; font-weight: 700; letter-spacing: 1px; color: #B9AFA8; text-transform: uppercase;">one-time</span>
+        <h3 style="font-family: 'Baloo 2', sans-serif; font-size: 24px; margin: 0; font-weight: 600;">💡 brand strategy session</h3>
+        <div>
+          <span style="font-family: 'Baloo 2', sans-serif; font-size: 30px; color: #E10F8C; font-weight: 700;">$300–$500</span>
+          <div style="font-size: 13px; color: #7A6F68; font-weight: 600; margin-top: 2px;">one-time investment</div>
+        </div>
+        <div class="sl-pricing-features" style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px 16px; margin-top: 4px; font-size: 14.5px; color: #4A403A;">
+          <div>✓ 1:1 brand voice deep dive</div>
+          <div>✓ clear content direction</div>
+          <div>✓ audience &amp; goal clarity</div>
+          <div>✓ action plan you can use immediately</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="position: relative; align-self: center; width: 100%; max-width: 620px;">
+      <div style="position: absolute; top: -16px; left: 50%; transform: translateX(-50%); background: #2B2320; color: #fff; font-family: 'Baloo 2', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.5px; padding: 6px 16px; border-radius: 999px; display: flex; align-items: center; gap: 6px; z-index: 2;">
+        <span style="color: #FF5FB8;">★</span> MOST POPULAR
+      </div>
+      <div style="background: #fff; border: 2.5px solid #E10F8C; border-radius: 24px; padding: 40px 36px 32px; box-shadow: 0 10px 32px rgba(225,15,140,0.15); display: flex; flex-direction: column; gap: 14px;">
+        <span style="font-size: 12px; font-weight: 700; letter-spacing: 1px; color: #B9AFA8; text-transform: uppercase;">monthly retainer</span>
+        <h3 style="font-family: 'Baloo 2', sans-serif; font-size: 26px; margin: 0; font-weight: 600;">🚀 social media management</h3>
+        <div>
+          <span style="font-family: 'Baloo 2', sans-serif; font-size: 34px; color: #E10F8C; font-weight: 700;">from $675<span style="font-size: 18px; color: #2B2320;">/mo</span></span>
+        </div>
+        <p style="margin: 0; font-size: 14px; color: #7A6F68;">custom plan after consultation</p>
+        <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 6px; font-size: 15px; color: #4A403A;">
+          <div>✓ custom content planning</div>
+          <div>✓ scheduling &amp; publishing</div>
+          <div>✓ engagement &amp; growth support</div>
+          <div>✓ performance insights</div>
+        </div>
+      </div>
+    </div>
+
+    <p style="text-align: center; font-size: 12.5px; color: #A79C94; margin: 4px 0 0;">all prices are guidelines. final costs determined after a free consultation call.</p>
+
+    <div style="display: flex; justify-content: center; gap: 6px; font-size: 26px; color: #E10F8C; margin-top: 4px;">
+      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+    </div>
+  </section>
+
+  <!-- VERTICALS -->
+  <section class="sl-section-pad" style="max-width: 900px; margin: 0 auto; padding-top: 8px; padding-bottom: 64px; text-align: center;">
+    <h2 style="font-family: 'Baloo 2', sans-serif; font-size: 24px; color: #2B2320; margin: 0 0 20px; font-weight: 600;">experience working with businesses in...</h2>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px;">
+      <span style="background: #FFEAF6; color: #E10F8C; font-family: 'Baloo 2', sans-serif; font-weight: 600; font-size: 16px; padding: 10px 22px; border-radius: 999px;">💪 fitness</span>
+      <span style="background: #FFEAF6; color: #E10F8C; font-family: 'Baloo 2', sans-serif; font-weight: 600; font-size: 16px; padding: 10px 22px; border-radius: 999px;">🌿 wellness</span>
+      <span style="background: #FFEAF6; color: #E10F8C; font-family: 'Baloo 2', sans-serif; font-weight: 600; font-size: 16px; padding: 10px 22px; border-radius: 999px;">💄 beauty</span>
+      <span style="background: #FFEAF6; color: #E10F8C; font-family: 'Baloo 2', sans-serif; font-weight: 600; font-size: 16px; padding: 10px 22px; border-radius: 999px;">🍽️ dining</span>
+    </div>
+  </section>
+
+  <!-- STATS (aggregate growth across managed profiles, Apr 2022–Jun 2026 vs. prior period) -->
+  <section class="sl-section-pad" style="background: #2B2320; padding-top: 56px; padding-bottom: 56px;">
+    <div class="sl-stats-grid" style="max-width: 900px; margin: 0 auto; display: grid; gap: 24px; text-align: center;">
+      <div>
+        <div style="font-family: 'Baloo 2', sans-serif; font-size: 36px; font-weight: 700; color: #FF8FCB;">+96.5%</div>
+        <div style="font-size: 13px; color: #C9BFB8; margin-top: 4px;">net audience growth</div>
+      </div>
+      <div>
+        <div style="font-family: 'Baloo 2', sans-serif; font-size: 36px; font-weight: 700; color: #FF8FCB;">+14.5%</div>
+        <div style="font-size: 13px; color: #C9BFB8; margin-top: 4px;">impressions</div>
+      </div>
+      <div>
+        <div style="font-family: 'Baloo 2', sans-serif; font-size: 36px; font-weight: 700; color: #FF8FCB;">+23.5%</div>
+        <div style="font-size: 13px; color: #C9BFB8; margin-top: 4px;">engagement rate</div>
+      </div>
+    </div>
+    <p style="text-align: center; font-size: 12px; color: #8A8079; margin: 24px 0 0;">across managed fitness, beauty &amp; dining brand profiles</p>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="sl-section-pad" style="background: #FFEAF6; padding-top: 56px; padding-bottom: 56px;">
+    <div class="sl-about-grid" style="max-width: 900px; margin: 0 auto; display: grid; gap: 40px; align-items: center;">
+      <div class="sl-about-photo-wrap" style="width: 100%; max-width: 200px; aspect-ratio: 1 / 1;">
+        <img src="images/kendra-photo.png" alt="Kendra Lee, founder of social-lee" style="display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 50%; box-shadow: 0 0 0 6px #fff;" />
+      </div>
+      <div>
+        <h2 style="font-family: 'Baloo 2', sans-serif; font-size: 32px; color: #E10F8C; margin: 0 0 16px; font-weight: 700;">hi, i'm kendra 👋</h2>
+        <p style="font-size: 17px; line-height: 1.65; margin: 0 0 14px; color: #2B2320;">i started social-lee after watching too many brilliant small business owners get stuck in the same cycle: knowing social media was essential, but never quite having the bandwidth to do it justice. consider me your missing piece!</p>
+        <p style="font-size: 15px; line-height: 1.6; margin: 0; color: #7A6F68;">by day, i lead marketing strategy across fitness, wellness, hospitality, and nonprofit brands — social-lee is where i get to work directly with small businesses, strategy through execution. <a href="https://kendrahlee.com" target="_blank" rel="noopener" style="color: #E10F8C; font-weight: 600;">more about my background →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="sl-testimonial-grid sl-section-pad" style="max-width: 1080px; margin: 0 auto; padding-top: 64px; padding-bottom: 64px; display: grid; gap: 24px;">
+    <div style="background: #fff; border-radius: 20px; padding: 28px 24px; box-shadow: 0 4px 20px rgba(43,35,32,0.05); display: flex; flex-direction: column; gap: 12px;">
+      <span style="font-family: 'Baloo 2', sans-serif; font-weight: 600; color: #E10F8C; font-size: 15px;">Tania</span>
+      <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: #4A403A;">💬 "It is a pleasure to collaborate with Kendra; she knows exactly what she needs to achieve her goals and communicates clearly. I highly recommend Kendra for marketing and social media strategy and execution."</p>
+    </div>
+    <div style="background: #fff; border-radius: 20px; padding: 28px 24px; box-shadow: 0 4px 20px rgba(43,35,32,0.05); display: flex; flex-direction: column; gap: 12px;">
+      <span style="font-family: 'Baloo 2', sans-serif; font-weight: 600; color: #E10F8C; font-size: 15px;">Andy</span>
+      <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: #4A403A;">💬 "What I appreciate more than anything about Kendra is that she makes what could be a very difficult process so darn easy."</p>
+    </div>
+    <div style="background: #fff; border-radius: 20px; padding: 28px 24px; box-shadow: 0 4px 20px rgba(43,35,32,0.05); display: flex; flex-direction: column; gap: 12px;">
+      <span style="font-family: 'Baloo 2', sans-serif; font-weight: 600; color: #E10F8C; font-size: 15px;">Stewart</span>
+      <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: #4A403A;">💬 "It's working with people like Kendra that made my workday and workplace better. Her energy and desire to do well and succeed made my job much more enjoyable."</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="sl-section-pad" style="background: #2B2320; padding-top: 40px; padding-bottom: 40px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 12px;">
+    <a href="mailto:teamsocialee@gmail.com" style="color: #FF8FCB; text-decoration: none; font-family: 'Baloo 2', sans-serif; font-size: 18px; font-weight: 600;">📩 teamsocialee@gmail.com</a>
+    <a href="https://www.instagram.com/team.social.lee/" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; color: #FF8FCB; text-decoration: none; font-family: 'Baloo 2', sans-serif; font-size: 16px; font-weight: 600;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
+      @team.social.lee
+    </a>
+  </footer>
+
+</div>
+
+</x-dc>
+</body>
+</html>
